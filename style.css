@@ -32,6 +32,10 @@ h6 {
   font-size: inherit;
 }
 
+button {
+  font-family: inherit;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -60,6 +64,9 @@ html {
   --bg-white: #FFFFFF;
   --bg-gray: #F5F5F5;
 
+  /* separator */
+  --separator-gray: #EBEBEB;
+
 }
 
 body {
@@ -70,6 +77,7 @@ body {
   font-weight: 400;
   line-height: normal;
   color: var(--label-black-light);
+  margin-bottom: 200px;
 }
 
 h1 {
@@ -88,3 +96,252 @@ h2 {
   width: 1440px;
   margin: 0 auto;
 }
+
+.btn {
+  background: var(--accent-yellow);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+/* Header */
+
+.header {
+  margin-top: 31px;
+}
+
+.header__inner  {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__left,
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  cursor: pointer;
+}
+
+.header__logo img {
+  width: 129px;
+}
+
+.header__routes {
+  margin-left: 36px;
+  position: relative;
+}
+
+.header__routes::after {
+  content: '';
+  position: absolute;
+  top: 21px;
+  right: 25px;
+  width: 8px;
+  height: 8px;
+  background: url("icons/arrow-down-sign.svg");
+}
+
+.header__routes button {
+  padding: 12px 49px 13px 27px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px; /* 166.667% */
+}
+
+.header__menu {
+  margin-left: 50px;
+  font-size: 15px;
+  line-height: 25px; /* 166.667% */
+}
+
+.menu {
+  display: flex;
+  gap: 55px;
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+.help-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+
+.header__right {
+  gap: 20px;
+}
+
+.header__favorites {
+  padding: 15px 14px 13px 14px;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  background: var(--accent-grey);
+  cursor: pointer;
+}
+
+.header__login .btn {
+  padding: 12px 32px 13px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px; /* 166.667% */
+  background: var(--accent-grey);
+}
+
+/* Main */
+
+.main {
+  margin-top: 32px;
+}
+
+.main__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 640px;
+  background: url("img/main_screen_bg.jpg");
+}
+
+.main__header {
+  margin-top: 122px;
+}
+
+.main__header h1 {
+  width: 549px;
+}
+
+.main__header p {
+  margin-top: 9px;
+}
+
+.main__search {
+  margin-top: 48px;
+  width: 779px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  color: var(--label-grey-light);
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 100px;
+  background: var(--bg-white);
+  box-shadow: 0 42px 80px 0 rgba(0, 0, 0, 0.25);
+}
+
+.main__routes,
+.main__date {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.main__routes {
+  padding-left: 24px;
+}
+
+.main__separator {
+  width: 1px;
+  height: 37px;
+  margin-left: 28px;
+  margin-right: 29px;
+  background: var(--separator-gray);
+}
+
+.main__routes-svg,
+.main__date-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--bg-white);
+  width: 37px;
+  height: 37px;
+  border-radius: 100px;
+  border: 1px solid #DBDBDB;
+}
+
+.main__search-btn {
+  position: relative;
+  margin-left: auto;
+  margin-right: 11px;
+  width: 134px;
+  height: 55px;
+}
+
+.main__search-btn .btn {
+  color: var(--label-black);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 17px 30px 19px 53px;
+}
+
+.main__search-btn::after {
+  content: "";
+  background: url("icons/loupe.svg");
+  position: absolute;
+  top: 19px;
+  left: 29px;
+  width: 15px;
+  height: 15px;
+}
+
+.main__often {
+  display: flex;
+  gap: 18px;
+  margin-top: 127px;
+}
+
+.often-text {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px; /* 178.571% */
+}
+
+.often__list {
+  display: flex;
+  gap: 15px;
+}
+
+.list__item {
+  color: var(--label-white);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  background: rgba(37, 37, 37, 0.15);
+}
+
+.list__item:first-child {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.list__item:nth-child(2) {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.list__item:nth-child(3) {
+  padding-left: 18px;
+  padding-right: 16px;
+}
+
+.list__item:last-child {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+
+
+
+
+
