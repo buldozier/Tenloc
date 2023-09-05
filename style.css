@@ -32,8 +32,11 @@ h6 {
   font-size: inherit;
 }
 
-button {
+button,
+input,
+select {
   font-family: inherit;
+  font-size: inherit;
 }
 
 html {
@@ -54,6 +57,7 @@ html {
   --label-black-light: #252525;
   --label-grey: #6A6A6A;
   --label-grey-light: #7B7B7B;
+  --label-grey-light-2: #E6E6E6;
 
   /* accent */
   --accent-yellow: #FFD600;
@@ -309,7 +313,7 @@ h2 {
   gap: 15px;
 }
 
-.list__item {
+.often__item {
   color: var(--label-white);
   text-align: center;
   font-size: 14px;
@@ -320,24 +324,129 @@ h2 {
   background: rgba(37, 37, 37, 0.15);
 }
 
-.list__item:first-child {
+.often__item:first-child {
   padding-left: 14px;
   padding-right: 14px;
 }
 
-.list__item:nth-child(2) {
+.often__item:nth-child(2) {
   padding-left: 13px;
   padding-right: 13px;
 }
 
-.list__item:nth-child(3) {
+.often__item:nth-child(3) {
   padding-left: 18px;
   padding-right: 16px;
 }
 
-.list__item:last-child {
+.often__item:last-child {
   padding-left: 17px;
   padding-right: 17px;
+}
+
+/* Popular */
+
+.popular {
+  margin-top: 93px;
+}
+
+.popular__top p {
+  margin-top: 17px;
+}
+
+.popular__list {
+  margin-top: 63px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px 46px;
+}
+
+.popular__item {
+  position: relative;
+  display: flex;
+  width: 449px;
+  height: 490px;
+  align-items: flex-end;
+}
+
+.popular__item-content {
+  padding-bottom: 38px;
+  padding-left: 44px;
+}
+
+.popular__item-content p {
+  color: var(--label-white);
+  font-size: 22px;
+  font-weight: 700;
+  margin-left: 3px;
+}
+
+.popular__item-content .btn {
+  margin-top: 24px;
+  padding: 10px 22px 10px 22px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.popular__item-img {
+  position: absolute;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+/* excursions */
+
+.excursions {
+  margin-top: 107px;
+}
+
+.excursions__top {
+  display: flex;
+  align-items: center;
+}
+
+.choose-city {
+  margin-left: 55px;
+  position: relative;
+}
+
+#city {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.choose-city::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 22px;
+  width: 7px;
+  height: 7px;
+  background: url("icons/right-arrow.svg");
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  color: #B7B7B7;
+  font-weight: 500;
+  line-height: 26px; /* 162.5% */
+  padding: 14px 78px 13px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--label-grey-light-2);
+  background: var(--bg-white);
+  outline: none;
+  cursor: pointer;
+}
+
+.choose-date {
+  margin-left: 29px;
+}
+
+.choose-date .input {
+  gap: 61px;
+  padding-right: 16px;
 }
 
 
