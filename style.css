@@ -1082,6 +1082,7 @@ h3 {
   margin-top: 83px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .footer__top {
